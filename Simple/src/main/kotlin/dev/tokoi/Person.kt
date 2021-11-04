@@ -1,5 +1,4 @@
 package dev.tokoi
 
-class Person {
-    var Name: String = ""
+class Person(var Name: String) {
 }
