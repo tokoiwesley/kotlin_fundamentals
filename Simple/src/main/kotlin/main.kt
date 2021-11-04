@@ -12,4 +12,10 @@ fun main(args: Array<String>) {
     println("Name is ${wesley.Name}")
 
     wesley.display()
+
+    wesley.displayWithLambda(::printName)
+}
+
+fun printName(name: String) {
+    println(name)
 }
