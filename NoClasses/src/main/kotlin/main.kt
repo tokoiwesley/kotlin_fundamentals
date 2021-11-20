@@ -7,12 +7,13 @@ fun main(args: Array<String>) {
     q.display()
 
     println("The answer to ${q.Question} is ${q.Answer}")
-    
-    if (q.Answer == q.CorrectAnswer) {
-        println("You were correct")
+    val message: String = if (q.Answer == q.CorrectAnswer) {
+        "You were correct"
     } else {
-        println("Try again")
+        "Try again"
     }
+
+    println(message)
 }
 
 class Question {
