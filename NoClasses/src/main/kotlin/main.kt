@@ -31,10 +31,13 @@ class Question {
     }
 
     fun printResult() {
-        if (Answer == CorrectAnswer) {
-            print("You were correct")
-        } else {
-            print("Try again")
+        when (Answer) {
+            CorrectAnswer -> {
+                print("You were correct")
+            }
+            else -> {
+                print("Try again")
+            }
         }
     }
 }
