@@ -1,3 +1,5 @@
+import java.lang.NumberFormatException
+
 fun main(args: Array<String>) {
     println("Hello, World")
     val q: Question = Question()
@@ -5,7 +7,7 @@ fun main(args: Array<String>) {
     q.Answer = null
     if (q.Answer != null) {
     }
-    q.Answer = "42"
+    q.Answer = "Four"
 //    q.Question = ""
     q.display()
 
@@ -19,6 +21,14 @@ fun main(args: Array<String>) {
     println(message)
 
     q.printResult()
+
+    var number: Int? = try {
+        Integer.parseInt(q.Answer)
+    } catch (e: NumberFormatException) {
+        null
+    }
+
+    println("Number is $number")
 }
 
 class Question {
@@ -33,10 +43,10 @@ class Question {
     fun printResult() {
         when (Answer) {
             CorrectAnswer -> {
-                print("You were correct")
+                println("You were correct")
             }
             else -> {
-                print("Try again")
+                println("Try again")
             }
         }
     }
