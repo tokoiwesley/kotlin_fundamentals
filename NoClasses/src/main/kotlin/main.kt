@@ -1,34 +1,10 @@
 import java.lang.NumberFormatException
 
 fun main(args: Array<String>) {
-    println("Hello, World")
-    val q: Question = Question()
-//    q = Question()
-    q.Answer = null
-    if (q.Answer != null) {
+
+    for (i in 1..10) {
+        println(i)
     }
-    q.Answer = "Four"
-//    q.Question = ""
-    q.display()
-
-    println("The answer to ${q.Question} is ${q.Answer}")
-    val message: String = if (q.Answer == q.CorrectAnswer) {
-        "You were correct"
-    } else {
-        "Try again"
-    }
-
-    println(message)
-
-    q.printResult()
-
-    var number: Int? = try {
-        Integer.parseInt(q.Answer)
-    } catch (e: NumberFormatException) {
-        null
-    }
-
-    println("Number is $number")
 }
 
 class Question {
