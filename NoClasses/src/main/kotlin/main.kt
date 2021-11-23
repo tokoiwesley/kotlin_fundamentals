@@ -18,6 +18,10 @@ fun main(args: Array<String>) {
     for ((name, age) in ages) {
         println("$name is $age")
     }
+
+    for ((index, element) in numbers.withIndex()) {
+        println("$element at $index")
+    }
 }
 
 class Question {
