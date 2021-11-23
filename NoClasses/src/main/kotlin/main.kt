@@ -1,4 +1,5 @@
 import java.lang.NumberFormatException
+import java.util.*
 
 fun main(args: Array<String>) {
 
@@ -6,6 +7,16 @@ fun main(args: Array<String>) {
 
     for (i in numbers) {
         println(i)
+    }
+
+    var ages = TreeMap<String, Int>()
+    ages["Wesley"] = 31
+    ages["Sam"] = 24
+    ages["Alex"] = 24
+    ages["Harry"] = 26
+
+    for ((name, age) in ages) {
+        println("$name is $age")
     }
 }
 
