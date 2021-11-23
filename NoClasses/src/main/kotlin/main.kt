@@ -1,8 +1,22 @@
+import java.io.FileReader
+import java.io.IOException
 import java.lang.NumberFormatException
 import java.util.*
 
 fun main(args: Array<String>) {
+    var reader = FileReader("filename")
 
+    try {
+        reader.read()
+    } catch (e: IOException) {
+        //
+    } finally {
+        //
+    }
+
+}
+
+fun ranges() {
     var numbers = listOf(1, 2, 3, 4, 5)
 
     for (i in numbers) {
