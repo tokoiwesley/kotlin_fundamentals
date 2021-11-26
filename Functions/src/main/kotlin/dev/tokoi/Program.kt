@@ -1,7 +1,12 @@
+@file:JvmName("DisplayFunctions")
+
 package dev.tokoi
 
 fun main(args: Array<String>) {
-    println(max(1, 2))
+    display("Hello, World!")
 }
 
-fun max(a: Int, b: Int): Int = if (a > b) a else b
+fun display(message: String): Boolean {
+    println(message)
+    return true
+}
