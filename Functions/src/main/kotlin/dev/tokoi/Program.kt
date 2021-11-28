@@ -3,7 +3,7 @@
 package dev.tokoi
 
 fun main(args: Array<String>) {
-    log("Hello, World!", 2)
+    log(loglevel = 2, message = "Hello, World!")
 }
 
 @JvmOverloads
