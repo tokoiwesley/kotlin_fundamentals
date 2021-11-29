@@ -5,15 +5,23 @@ interface Time {
     fun setTime(time: WesleyTime) = setTime(time.hours)
 }
 
+interface EndOfTheWorld {
+    fun setTime(time: WesleyTime) {}
+}
+
 class WesleyTime {
     var hours: Int = 0
     var minutes: Int = 0
     var seconds: Int = 0
 }
 
-class YetiTime : Time {
-    override fun setTime(hours: Int, mins: Int, secs: Int) {
-        TODO("Not yet implemented")
+class YetiTime : Time, EndOfTheWorld {
+    override fun setTime(time: WesleyTime) {
+        super<Time>.setTime(time)
+        super<EndOfTheWorld>.setTime(time)
     }
 
+    override fun setTime(hours: Int, mins: Int, secs: Int) {
+        //
+    }
 }
