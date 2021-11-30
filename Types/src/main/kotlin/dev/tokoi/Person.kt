@@ -4,7 +4,6 @@ fun main(args: Array<String>) {
     val wesley = Student("Wesley", "Tokoi", 1)
     val tokoi = Student("Wesley", "Tokoi", 1, "Some tutor")
     print(wesley.id)
-    println(tokoi.tutor)
 }
 
 abstract class Person(var firsName: String, var lastName: String) {
@@ -12,17 +11,11 @@ abstract class Person(var firsName: String, var lastName: String) {
     abstract fun getAddress(): String
 }
 
-class Student(firsName: String, lastName: String, _id: Int) : Person(firsName, lastName) {
+class Student(firsName: String, lastName: String, _id: Int, tutor: String = "") : Person(firsName, lastName) {
     val id: Int
-    var tutor: String
 
     init {
         id = _id
-        tutor = ""
-    }
-
-    constructor(firsName: String, lastName: String, _id: Int, tutor: String) : this(firsName, lastName, _id) {
-        this.tutor = tutor
     }
 
     override fun getAddress(): String {
