@@ -2,12 +2,18 @@ package dev.tokoi
 
 fun main(args: Array<String>) {
     val wesley = Student("Wesley", "Tokoi", 1)
-    val tokoi = Student("Wesley", "Tokoi", 1, "Some tutor")
     print(wesley.id)
 
-    Student.createPostgraduate("Tokoi")
-    Student.createUndergraduate("Wesley")
+}
 
+class Program {
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            val wesley = Student("Wesley", "Tokoi", 1)
+            print(wesley.id)
+        }
+    }
 }
 
 abstract class Person(var firsName: String, var lastName: String) {
@@ -36,7 +42,7 @@ open class Student(firsName: String, lastName: String, _id: Int, tutor: String =
         return ""
     }
 
-    companion object: XmlSerializer<Student> {
+    companion object : XmlSerializer<Student> {
         fun createUndergraduate(name: String): Undergraduate {
             return Undergraduate(name)
         }
@@ -46,7 +52,7 @@ open class Student(firsName: String, lastName: String, _id: Int, tutor: String =
         }
 
         override fun toXml(item: Student) {
-            
+
         }
     }
 }
