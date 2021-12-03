@@ -14,5 +14,14 @@ fun main(args: Array<String>) {
     var smallSquaredInts = ints.filter { it < 5 }
         .map { it * it }
 
-    for (i: Int in smallSquaredInts) println(i)
+//    for (i: Int in smallSquaredInts) println(i)
+
+    val meetings = listOf(Meeting(1, "Board Meeting"), Meeting(2, "Committee Meeting"))
+
+    val titles = meetings
+        .filter { it.title.startsWith("C") }
+        .map { m -> m.title }
+    for (t in titles) println(t)
 }
+
+class Meeting(val id: Int, val title: String)
