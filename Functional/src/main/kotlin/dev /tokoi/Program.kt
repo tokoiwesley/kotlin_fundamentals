@@ -2,6 +2,7 @@ package dev.tokoi
 
 fun main(args: Array<String>) {
     var program = Program()
+    var total = 0
 //    program.fibonacci(8)
     /*program.fibonacci(8, object : Process {
         override fun execute(value: Int) {
@@ -11,7 +12,9 @@ fun main(args: Array<String>) {
     })*/
 //    program.fibonacci(8) { n -> println(n) }
 //    program.fibonacci(8) { println(it) }
-    program.fibonacci(8, ::println)
+//    program.fibonacci(8, ::println)
+    program.fibonacci(8) { it -> total += it }
+    println(total)
 }
 
 interface Process {
