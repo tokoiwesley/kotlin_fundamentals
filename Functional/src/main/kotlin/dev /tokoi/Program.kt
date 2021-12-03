@@ -9,8 +9,9 @@ fun main(args: Array<String>) {
         }
 
     })*/
-    program.fibonacci(8) { n -> println(n) }
-    program.fibonacci(8) { println(it) }
+//    program.fibonacci(8) { n -> println(n) }
+//    program.fibonacci(8) { println(it) }
+    program.fibonacci(8, ::println)
 }
 
 interface Process {
