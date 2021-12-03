@@ -5,9 +5,14 @@ fun main(args: Array<String>) {
 
     val smallInts = ints.filter { it < 4 }
 
-    for (i: Int in smallInts) println(i)
+//    for (i: Int in smallInts) println(i)
 
     var squaredInts = ints.map { it * it }
 
-    for (i: Int in squaredInts) println(i)
+//    for (i: Int in squaredInts) println(i)
+
+    var smallSquaredInts = ints.filter { it < 5 }
+        .map { it * it }
+
+    for (i: Int in smallSquaredInts) println(i)
 }
