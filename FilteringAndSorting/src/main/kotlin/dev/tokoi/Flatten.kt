@@ -5,6 +5,7 @@ fun main(args: Array<String>) {
 
     val people: List<Person> = meetings
         .flatMap(Meeting::people)
+        .distinct()
 
     for (p in people) println(p.name)
 }
