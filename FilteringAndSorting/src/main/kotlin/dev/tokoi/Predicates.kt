@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
 
     println(largeInts)
 
-    largeInts = ints.all { it > 3 }
+    largeInts = ints.any { it > 3 }
 
     println(largeInts)
 }
