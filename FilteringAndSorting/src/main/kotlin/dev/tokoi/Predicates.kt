@@ -16,6 +16,6 @@ fun main(args: Array<String>) {
 
     println(numberOfLargeInts)
 
-    var found = ints.find(greaterThanThree)
+    var found = ints.find { it > 6 }
     println(found)
 }
