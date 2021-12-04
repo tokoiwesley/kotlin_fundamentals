@@ -15,4 +15,7 @@ fun main(args: Array<String>) {
     var numberOfLargeInts = ints.count(greaterThanThree)
 
     println(numberOfLargeInts)
+
+    var found = ints.find(greaterThanThree)
+    println(found)
 }
