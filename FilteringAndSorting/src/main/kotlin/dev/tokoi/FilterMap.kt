@@ -23,5 +23,3 @@ fun main(args: Array<String>) {
         .map { m -> m.title }
     for (t in titles) println(t)
 }
-
-class Meeting(val id: Int, val title: String)
