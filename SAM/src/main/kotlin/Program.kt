@@ -3,7 +3,9 @@ fun main(args: Array<String>) {
 
     var count = 0
 
-    user.create { println("User $it has been created: ${++count} times") }
+    var eventListener = Created({ u: User -> println("User $u has been created: ${++count} times") })
+
+    user.create(eventListener)
 
     user.create { println("User $it has been created: ${++count} times") }
 }
