@@ -2,7 +2,8 @@ fun main(args: Array<String>) {
     var m: Meeting? = null
     var newMeeting: Meeting = Meeting()
 
-//    newMeeting = m
+    newMeeting = m ?: Meeting()
+
     closeMeeting(m)
     closeMeeting(newMeeting)
 }
