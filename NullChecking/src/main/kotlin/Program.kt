@@ -29,6 +29,7 @@ fun closeMeetingAssert(m: Meeting?): Boolean? {
 
 class Meeting {
     val canClose: Boolean = false
+    lateinit var address: Address
 
     fun close(): Boolean {
         return true
@@ -38,8 +39,16 @@ class Meeting {
         val saveable = o as? ISavable
         saveable?.save()
     }
+
+    fun init(addr: Address) {
+        address = addr
+    }
 }
 
 interface ISavable {
     fun save()
+}
+
+class Address {
+    //
 }
