@@ -1,3 +1,5 @@
+package dev.tokoi;
+
 public class Organizer {
     boolean closeMeeting(Meeting meeting) {
         if (meeting.canClose) return meeting.close();

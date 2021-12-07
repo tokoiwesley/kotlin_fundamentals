@@ -6,17 +6,28 @@ fun main(args: Array<String>) {
 
     closeMeeting(m)
     closeMeeting(newMeeting)
+
+    m?.let {
+        closeMeetingNonNull(m)
+    }
+}
+
+fun closeMeetingNonNull(m: Meeting): Boolean? {
+    return if (m.canClose == true) m.close()
+    else false
 }
 
 fun closeMeeting(m: Meeting?): Boolean? {
-//    return if (m?.canClose == true) m?.close()
-//    else false
+    return if (m?.canClose == true) m?.close()
+    else false
+}
 
+fun closeMeetingAssert(m: Meeting?): Boolean? {
     return if (m!!.canClose) m.close()
     else false
 }
 
-class Meeting() {
+class Meeting {
     val canClose: Boolean = false
 
     fun close(): Boolean {
