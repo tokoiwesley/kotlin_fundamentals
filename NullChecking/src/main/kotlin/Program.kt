@@ -8,7 +8,10 @@ fun main(args: Array<String>) {
 }
 
 fun closeMeeting(m: Meeting?): Boolean? {
-    return if (m?.canClose == true) m?.close()
+//    return if (m?.canClose == true) m?.close()
+//    else false
+
+    return if (m!!.canClose) m.close()
     else false
 }
 
