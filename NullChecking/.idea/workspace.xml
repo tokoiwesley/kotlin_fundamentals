@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6292d60d-ed52-4949-bad6-faf3523839b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Program.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Program.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1638819923988</updated>
-      <workItem from="1638819925476" duration="2304000" />
+      <workItem from="1638819925476" duration="3989000" />
     </task>
     <servers />
   </component>

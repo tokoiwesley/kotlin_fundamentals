@@ -22,4 +22,13 @@ class Meeting() {
     fun close(): Boolean {
         return true
     }
+
+    fun save(o: Any) {
+        val saveable = o as? ISavable
+        saveable?.save()
+    }
+}
+
+interface ISavable {
+    fun save()
 }
