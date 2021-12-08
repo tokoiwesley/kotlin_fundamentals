@@ -5,8 +5,8 @@ fun main(args: Array<String>) {
 
     people.add(null)
 
-    for (person: Person? in people) {
-        println(person?.age)
+    for (person: Person in people.filterNotNull()) {
+        println(person.age)
     }
 }
 
