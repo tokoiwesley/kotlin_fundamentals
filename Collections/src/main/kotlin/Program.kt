@@ -1,7 +1,9 @@
 fun main(args: Array<String>) {
-    var people: List<Person?>? = null
+    var people: MutableList<Person?>? = null
 
-    people = listOf(Person(23), Person(23), null)
+    people = mutableListOf(Person(23), Person(23))
+
+    people.add(null)
 
     for (person: Person? in people) {
         println(person?.age)
