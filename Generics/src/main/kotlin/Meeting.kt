@@ -29,6 +29,9 @@ inline fun <reified T : Meeting> buildMeeting(noinline action: (T) -> Unit): T {
 }
 
 open class Meeting {
+    fun attend() {
+
+    }
 }
 
 class BoardMeeting : Meeting() {
